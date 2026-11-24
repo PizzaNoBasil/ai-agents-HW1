@@ -1,0 +1,7 @@
+node_modules/
+.runtime/
+.env
+.env.*
+__pycache__/
+*.dpapi
+.claude/settings.local.json

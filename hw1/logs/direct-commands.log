@@ -1,0 +1,26 @@
+﻿> node --version
+v24.22.3
+exit code: 0
+
+> node --test tests/acceptance.test.mjs
+✔ T1: исходный пример — 3 задачи, 8 ч, 2 ч выполнено, 25% (не 1/3) (0.4556ms)
+✔ T2: «Практика» готова — 6 из 8 ч, 75%; данные изменились (0.5122ms)
+✔ T3: фильтр «активные» — только Практика и Повторение, прогресс остаётся 25% (0.4502ms)
+✔ T4: ошибки ввода (0.3384ms)
+✔ T5: пустое состояние — 0 ч, 0%, без NaN/Infinity (0.1277ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.9681
+exit code: 0
+
+> node --check app.mjs
+exit code: 0
+
+> node --check domain.mjs
+exit code: 0
+

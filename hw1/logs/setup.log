@@ -1,0 +1,20 @@
+ДЗ1, вариант B — подготовка окружения (2026-11-24)
+
+Git:       git version 2.56.0.windows.4
+Node.js:   v24.22.3   (winget install --id OpenJS.NodeJS.24)
+npm:       11.19.1
+OpenSpec:  1.14.1     (npm install -g @fission-ai/openspec@1.14.1)
+
+Coding-ассистент: Claude Code (вместо OpenCode из пособия; разрешено на стр. 6).
+Модель:    Claude Sonnet 5.5 (claude-sonnet-5-5), одна и та же для обеих попыток
+
+with-spec:
+  > openspec init --tools claude --language ru --no-animation
+  Создано: openspec/config.yaml, openspec/specs/, openspec/changes/archive/,
+           .claude/commands/opsx/*.md, .claude/skills/openspec-*/SKILL.md
+  Команды в Claude Code: /opsx:propose, /opsx:apply (в пособии для OpenCode: /opsx-propose, /opsx-apply)
+
+direct:
+  только brief.md, без openspec/
+
+brief.md одинаковый в обеих папках (md5 1eb5276b9e80d0a58df0972962f392d6).

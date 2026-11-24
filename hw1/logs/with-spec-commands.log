@@ -1,0 +1,57 @@
+﻿> openspec --version
+1.14.1
+exit code: 0
+
+> openspec validate build-tracker --strict --no-interactive
+Change 'build-tracker' is valid
+exit code: 0
+
+> openspec status --change build-tracker
+- Loading change status...
+Change: build-tracker
+Schema: spec-driven
+Change root: C:\Users\CHVVV\OneDrive\Документы\CodeVault\hw1\with-spec\openspec\changes\build-tracker
+Progress: 4/4 artifacts complete
+
+[x] proposal
+[x] specs
+[x] design
+[x] tasks
+
+All planning artifacts complete!
+Next: openspec instructions apply --change "build-tracker" --json
+exit code: 0
+
+> node --test tests/acceptance.test.mjs
+✔ T1: исходный пример — 3 задачи, 8 ч, 2 ч, 25% по часам (0.8142ms)
+✔ T2: «Практика» готова — 6 из 8 ч, 75%, данные изменились без мутации (0.1101ms)
+✔ переключение done обратно возвращает 25% (0.0585ms)
+✔ T3: фильтр «активные» меняет список, но не итоги и прогресс (0.109ms)
+✔ округление: 2 из 6 ч — 33% (0.0773ms)
+✔ T4: пустое название и пробелы не проходят, ошибка относится к названию (0.183ms)
+✔ T4: пустые, пробельные и отрицательные часы не проходят (0.1326ms)
+✔ пустое значение часов не равно нулю (0.0663ms)
+✔ T4: границы 0,5–24 и шаг 0,5 (0.0901ms)
+✔ валидная форма: название обрезается, часы — число (0.0995ms)
+✔ обе ошибки возвращаются вместе (0.0685ms)
+✔ добавление: новая задача активна, id уникален, итоги пересчитаны (0.0998ms)
+✔ id не повторяется после удаления последней задачи (0.0567ms)
+✔ T5: все задачи удалены — 0 ч, 0%, без NaN и Infinity (0.0674ms)
+✔ T5: после опустошения добавление работает (0.0407ms)
+✔ sanitizeTasks отвергает повреждённые данные (0.1106ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 56.9416
+exit code: 0
+
+> node --check app.mjs
+exit code: 0
+
+> node --check domain.mjs
+exit code: 0
+
